@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tata AIA Insurance Agent Portal — Secure. Trusted. Empowering.</title>
+  <meta name="description"
+    content="Tata AIA Insurance Agent Portal for managing customer policies, collecting premiums, and tracking insurance performance. 99.41% Claim Settlement Ratio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="#D62049" />
+            <path d="M8 12h16v2H8zM8 17h12v2H8zM8 22h8v2H8z" fill="#fff" />
+            <circle cx="24" cy="10" r="4" fill="#FFD700" />
+          </svg>
+        </div>
+        <span class="logo-text">Tata <span class="logo-aia">AIA</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+        <a href="#insurance-portal" class="nav-link" data-section="insurance-portal">New Policy</a>
+        <a href="#benefits" class="nav-link" data-section="benefits">Benefits</a>
+        <a href="#my-policies" class="nav-link" data-section="my-policies">My Policies</a>
+        <a href="#profile" class="nav-link" data-section="profile">Profile</a>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-signin" id="openLogin">Sign In</button>
+        <a href="#insurance-portal" class="nav-cta">+ Start Policy</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ LOGIN MODAL ═══════════ -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeLogin">&times;</button>
+      <div class="modal-header">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="#D62049" />
+            <path d="M8 12h16v2H8zM8 17h12v2H8zM8 22h8v2H8z" fill="#fff" />
+          </svg>
+        </div>
+        <h2>User Login</h2>
+        <p>Access your secure advisor portal</p>
+      </div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label>User ID / Email</label>
+          <input type="text" id="loginUser" placeholder="Enter your ID" required />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="loginPass" placeholder="••••••••" required />
+        </div>
+        <div class="form-row" style="margin-bottom: 20px;">
+          <label class="radio-label"><input type="checkbox" /> Remember me</label>
+          <a href="#" id="forgotPassword"
+            style="font-size: 13px; color: var(--royal-blue); text-decoration: none;">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="loginBtn">Sign In to Portal</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">🛡️ Trusted by 89 Lakh+ Families</span>
+        <h1>Tata AIA Insurance<br />Agent Portal</h1>
+        <p class="hero-sub">Empowering you to protect families, one policy at a time. Manage policies, collect premiums,
+          and grow your insurance business — all in one place.</p>
+        <div class="hero-actions">
+          <a href="#insurance-portal" class="btn btn-hero">Start New Policy</a>
+          <a href="#benefits" class="btn btn-hero-outline">Explore Benefits</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value">99.41%</span>
+            <span class="hero-stat-label">Claim Settlement</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">₹1.3L Cr+</span>
+            <span class="hero-stat-label">AUM</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">600+</span>
+            <span class="hero-stat-label">Branches</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-1 float-anim">
+          <div class="mini-icon">📋</div>
+          <span>Term Insurance</span>
+          <small>₹50L Cover</small>
+        </div>
+        <div class="hero-card hero-card-2 float-anim-delay">
+          <div class="mini-icon">💰</div>
+          <span>ULIP Plan</span>
+          <small>Market Returns</small>
+        </div>
+        <div class="hero-card hero-card-3 float-anim-delay-2">
+          <div class="mini-icon">🏥</div>
+          <span>Health Plan</span>
+          <small>₹10L Cover</small>
+        </div>
+        <div class="hero-shield">
+          <svg width="120" height="140" viewBox="0 0 120 140" fill="none">
+            <path d="M60 0L120 25V70C120 105 90 130 60 140C30 130 0 105 0 70V25L60 0Z" fill="url(#shieldGrad)"
+              opacity="0.2" />
+            <path d="M60 10L110 32V70C110 100 85 122 60 130C35 122 10 100 10 70V32L60 10Z" fill="url(#shieldGrad)"
+              opacity="0.3" />
+            <path d="M45 70L55 80L78 55" stroke="#fff" stroke-width="5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="shieldGrad" x1="0" y1="0" x2="120" y2="140">
+                <stop stop-color="#D62049" />
+                <stop offset="1" stop-color="#267CC5" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ INSURANCE PORTAL ═══════════ -->
+  <section class="section" id="insurance-portal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">📝 New Policy</span>
+        <h2>Insurance Portal</h2>
+        <p>Fill in customer details and policy preferences to create a new insurance policy.</p>
+      </div>
+      <form class="policy-form" id="policyForm">
+        <div class="form-grid">
+          <!-- Customer Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <span class="form-icon">👤</span> Customer Details
+            </h3>
+            <div class="form-group">
+              <label for="custName">Full Name *</label>
+              <input type="text" id="custName" placeholder="Enter customer full name" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="custDob">Date of Birth *</label>
+                <input type="date" id="custDob" required />
+              </div>
+              <div class="form-group">
+                <label>Gender *</label>
+                <div class="radio-group">
+                  <label class="radio-label"><input type="radio" name="gender" value="Male" required /> Male</label>
+                  <label class="radio-label"><input type="radio" name="gender" value="Female" /> Female</label>
+                  <label class="radio-label"><input type="radio" name="gender" value="Other" /> Other</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="custPhone">Phone Number *</label>
+                <input type="tel" id="custPhone" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+              <div class="form-group">
+                <label for="custEmail">Email Address *</label>
+                <input type="email" id="custEmail" placeholder="customer@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="custAddress">Address</label>
+              <textarea id="custAddress" placeholder="Full residential address" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nomineeName">Nominee Name *</label>
+                <input type="text" id="nomineeName" placeholder="Nominee full name" required />
+              </div>
+              <div class="form-group">
+                <label for="nomineeRel">Nominee Relationship *</label>
+                <select id="nomineeRel" required>
+                  <option value="">Select relationship</option>
+                  <option value="Spouse">Spouse</option>
+                  <option value="Parent">Parent</option>
+                  <option value="Child">Child</option>
+                  <option value="Sibling">Sibling</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Policy Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <span class="form-icon">📄</span> Policy Details
+            </h3>
+            <div class="form-group">
+              <label for="planType">Plan Type *</label>
+              <select id="planType" required>
+                <option value="">Select plan type</option>
+                <option value="Term Plan">Term Plan</option>
+                <option value="ULIP">ULIP / Wealth Plan</option>
+                <option value="Savings">Savings Plan</option>
+                <option value="Retirement">Retirement / Pension Plan</option>
+                <option value="Health">Health Plan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sumAssured">Sum Assured: <span id="sumDisplay" class="sum-display">₹25,00,000</span></label>
+              <input type="range" id="sumAssured" min="500000" max="20000000" step="100000" value="2500000" />
+              <div class="range-labels">
+                <span>₹5 Lakh</span>
+                <span>₹2 Crore</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="policyTerm">Policy Term *</label>
+                <select id="policyTerm" required>
+                  <option value="">Select term</option>
+                  <option value="10">10 Years</option>
+                  <option value="15">15 Years</option>
+                  <option value="20">20 Years</option>
+                  <option value="25">25 Years</option>
+                  <option value="30">30 Years</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="policyStart">Policy Start Date *</label>
+                <input type="date" id="policyStart" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Premium Frequency *</label>
+              <div class="freq-options">
+                <label class="freq-option">
+                  <input type="radio" name="frequency" value="Monthly" required />
+                  <span class="freq-card">
+                    <strong>Monthly</strong>
+                    <small>Pay every month</small>
+                  </span>
+                </label>
+                <label class="freq-option">
+                  <input type="radio" name="frequency" value="Quarterly" />
+                  <span class="freq-card">
+                    <strong>Quarterly</strong>
+                    <small>Every 3 months</small>
+                  </span>
+                </label>
+                <label class="freq-option">
+                  <input type="radio" name="frequency" value="Annually" />
+                  <span class="freq-card">
+                    <strong>Annually</strong>
+                    <small>Once a year</small>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="premium-estimate" id="premiumEstimate">
+              <div class="premium-label">Estimated Premium</div>
+              <div class="premium-value" id="premiumValue">₹0</div>
+              <div class="premium-note">*Premium is indicative and may vary based on medical underwriting</div>
+            </div>
+
+            <!-- Signature Pad -->
+            <div class="form-group">
+              <label>Agent / Customer Signature *</label>
+              <div class="signature-container">
+                <canvas id="signaturePad" width="300" height="150"></canvas>
+                <div class="signature-actions">
+                  <button type="button" class="btn btn-secondary btn-sm" id="clearSignature">Clear</button>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="proceedPayment">
+              Proceed to Payment →
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════ BENEFITS CALCULATOR ═══════════ -->
+  <section class="section section-wash" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">🧮 Calculator</span>
+        <h2>Benefits Predictor</h2>
+        <p>Estimate the maturity value and wealth growth of your policy.</p>
+      </div>
+      <div class="calc-grid">
+        <div class="calc-controls">
+          <div class="form-group">
+            <label>Policy Investment: <span id="calcInvestDisplay">₹10,00,000</span></label>
+            <input type="range" id="calcInvest" min="100000" max="10000000" step="100000" value="1000000" />
+          </div>
+          <div class="form-group">
+            <label>Investment Tenure: <span id="calcTermDisplay">20 Years</span></label>
+            <input type="range" id="calcTerm" min="5" max="40" step="1" value="20" />
+          </div>
+          <div class="form-group">
+            <label>Expected Return (%): <span id="calcReturnDisplay">8%</span></label>
+            <input type="range" id="calcReturn" min="4" max="15" step="0.5" value="8" />
+          </div>
+        </div>
+        <div class="calc-result-card">
+          <div class="calc-result-main">
+            <span class="label">Total Wealth at Maturity</span>
+            <div class="calc-value" id="calcMaturityValue">₹46,60,957</div>
+          </div>
+          <div class="calc-stats">
+            <div class="calc-stat">
+              <span class="label">Total Invested</span>
+              <span id="calcTotalInvested">₹10,00,000</span>
+            </div>
+            <div class="calc-stat">
+              <span class="label">Net Wealth Gained</span>
+              <span id="calcWealthGained" class="text-success">₹36,60,957</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ POLICY FLOWCHART ═══════════ -->
+  <section class="section" id="flowchart">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">🚀 The Process</span>
+        <h2>How it works</h2>
+        <p>The journey from application to claim settlement.</p>
+      </div>
+      <div class="flow-chart">
+        <div class="flow-step">
+          <div class="flow-icon">📝</div>
+          <h4>Application</h4>
+          <p>Fill policy details</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">💳</div>
+          <h4>Payment</h4>
+          <p>Online premium</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">🛡️</div>
+          <h4>Issuance</h4>
+          <p>Policy generated</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">✨</div>
+          <h4>Maturity</h4>
+          <p>Receive benefits</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ANALYTICS (GRAPHS) ═══════════ -->
+  <section class="section section-wash" id="analytics">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">📈 Performance</span>
+        <h2>Analytics Dashboard</h2>
+        <p>Visualize policy trends and portfolio performance.</p>
+      </div>
+      <div class="analytics-grid">
+        <div class="analytics-card">
+          <h3>Business Growth (Monthly)</h3>
+          <canvas id="growthChart"></canvas>
+        </div>
+        <div class="analytics-card">
+          <h3>Plan Distribution</h3>
+          <canvas id="planChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ... (Existing sections below) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- ═══════════ PAYMENT GATEWAY ═══════════ -->
+  <section class="section section-wash" id="payment-section" style="display:none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">💳 Payment</span>
+        <h2>Select Payment Method</h2>
+        <p>Choose your preferred payment gateway to collect premium.</p>
+      </div>
+      <div class="payment-summary-card">
+        <div class="pay-summary-left">
+          <span class="pay-label">Customer</span>
+          <span class="pay-name" id="payCustomerName">—</span>
+        </div>
+        <div class="pay-summary-center">
+          <span class="pay-label">Plan</span>
+          <span class="pay-name" id="payPlanType">—</span>
+        </div>
+        <div class="pay-summary-right">
+          <span class="pay-label">Amount Due</span>
+          <span class="pay-amount" id="payAmount">₹0</span>
+        </div>
+      </div>
+      <div class="payment-grid" id="paymentGrid">
+        <label class="payment-option">
+          <input type="radio" name="payMethod" value="googlepay" />
+          <div class="payment-card">
+            <div class="payment-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect width="40" height="40" rx="10" fill="#fff" /><text x="6" y="27" font-size="20" font-weight="700"
+                  fill="#4285F4">G</text><text x="17" y="27" font-size="14" font-weight="600" fill="#34A853">Pay</text>
+              </svg>
+            </div>
+            <span class="payment-name">Google Pay</span>
+            <span class="payment-tag">UPI</span>
+          </div>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payMethod" value="phonepe" />
+          <div class="payment-card">
+            <div class="payment-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect width="40" height="40" rx="10" fill="#5F259F" /><text x="8" y="28" font-size="22"
+                  font-weight="700" fill="#fff">Pe</text>
+              </svg>
+            </div>
+            <span class="payment-name">PhonePe</span>
+            <span class="payment-tag">UPI</span>
+          </div>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payMethod" value="paytm" />
+          <div class="payment-card">
+            <div class="payment-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect width="40" height="40" rx="10" fill="#00BAF2" /><text x="4" y="28" font-size="16"
+                  font-weight="700" fill="#fff">Paytm</text>
+              </svg>
+            </div>
+            <span class="payment-name">Paytm</span>
+            <span class="payment-tag">Wallet</span>
+          </div>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payMethod" value="upi" />
+          <div class="payment-card">
+            <div class="payment-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect width="40" height="40" rx="10" fill="#00897B" /><text x="6" y="28" font-size="16"
+                  font-weight="700" fill="#fff">UPI</text>
+              </svg>
+            </div>
+            <span class="payment-name">UPI ID</span>
+            <span class="payment-tag">Direct</span>
+          </div>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payMethod" value="card" />
+          <div class="payment-card">
+            <div class="payment-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <rect width="40" height="40" rx="10" fill="#1A237E" />
+                <rect x="6" y="12" width="28" height="18" rx="3" fill="#fff" opacity="0.3" />
+                <rect x="6" y="16" width="28" height="4" fill="#FFD700" />
+                <rect x="8" y="24" width="12" height="2" rx="1" fill="#fff" opacity="0.5" />
+              </svg>
+            </div>
+            <span class="payment-name">Card Payment</span>
+            <span class="payment-tag">Visa / MC</span>
+          </div>
+        </label>
+      </div>
+      <!-- UPI ID input (hidden by default) -->
+      <div class="upi-input-area" id="upiInputArea" style="display:none;">
+        <div class="form-group">
+          <label for="upiId">Enter UPI ID</label>
+          <input type="text" id="upiId" placeholder="example@upi" />
+        </div>
+      </div>
+      <!-- Card input (hidden by default) -->
+      <div class="card-input-area" id="cardInputArea" style="display:none;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cardExpiry">Expiry</label>
+            <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" />
+          </div>
+          <div class="form-group">
+            <label for="cardCvv">CVV</label>
+            <input type="password" id="cardCvv" placeholder="***" maxlength="3" />
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-full" id="payNowBtn" style="margin-top:24px;" disabled>
+        Pay Premium →
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════ BENEFITS ═══════════ -->
+  <section class="section section-wash" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">⭐ Why Tata AIA?</span>
+        <h2>Benefits of Choosing Tata AIA</h2>
+        <p>India's most trusted life insurance partner with unmatched claim settlement and service.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🛡️</div>
+          <div class="benefit-stat">99.41%</div>
+          <h3>Claim Settlement Ratio</h3>
+          <p>Industry-leading claim settlement ensures your customers' families are always protected.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">💰</div>
+          <div class="benefit-stat">₹1.3L Cr+</div>
+          <h3>Assets Under Management</h3>
+          <p>Trusted with over ₹1.3 Lakh Crore in assets, reflecting deep customer confidence.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🏢</div>
+          <div class="benefit-stat">600+</div>
+          <h3>Pan-India Branches</h3>
+          <p>Extensive network of branches across India for convenient access and support.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+          <div class="benefit-stat">89 Lakh+</div>
+          <h3>Happy Families</h3>
+          <p>Millions of families trust Tata AIA for their life insurance needs across India.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">📋</div>
+          <div class="benefit-stat">₹1.5L</div>
+          <h3>Tax Savings u/s 80C</h3>
+          <p>Save up to ₹1.5 Lakh on income tax with eligible premium payments under Section 80C.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">⏱️</div>
+          <div class="benefit-stat">4 Hours</div>
+          <h3>Express Claim Process</h3>
+          <p>Fast and hassle-free claim settlement process, ensuring quick disbursement to beneficiaries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ POLICY DATE TRACKER ═══════════ -->
+  <section class="section" id="policy-dates">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">📅 Timeline</span>
+        <h2>Policy Date Tracker</h2>
+        <p>Visual timeline of key policy milestones and upcoming dates.</p>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline" id="timeline">
+          <div class="timeline-node completed">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">01 Jan 2025</span>
+              <span class="timeline-title">Policy Issued</span>
+              <span class="timeline-desc">Term Plan — ₹50L Cover</span>
+            </div>
+          </div>
+          <div class="timeline-line completed-line"></div>
+          <div class="timeline-node completed">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">01 Apr 2025</span>
+              <span class="timeline-title">Q1 Premium Paid</span>
+              <span class="timeline-desc">₹4,500 — Quarterly</span>
+            </div>
+          </div>
+          <div class="timeline-line completed-line"></div>
+          <div class="timeline-node active">
+            <div class="timeline-dot pulse"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">01 Jul 2025</span>
+              <span class="timeline-title">Q2 Premium Due</span>
+              <span class="timeline-desc">₹4,500 — Upcoming</span>
+            </div>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-node upcoming">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">01 Jan 2026</span>
+              <span class="timeline-title">Annual Renewal</span>
+              <span class="timeline-desc">Policy renewal due</span>
+            </div>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-node upcoming">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">01 Jan 2045</span>
+              <span class="timeline-title">Policy Maturity</span>
+              <span class="timeline-desc">20-year term completion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ MY POLICIES ═══════════ -->
+  <section class="section section-wash" id="my-policies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">📊 Dashboard</span>
+        <h2>My Policies</h2>
+        <p>Overview of all policies sold and their current status.</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-blue">📋</div>
+          <div class="stat-info">
+            <span class="stat-number" id="totalPolicies">12</span>
+            <span class="stat-label">Total Policies</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-green">✅</div>
+          <div class="stat-info">
+            <span class="stat-number" id="activePolicies">10</span>
+            <span class="stat-label">Active</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-red">💰</div>
+          <div class="stat-info">
+            <span class="stat-number" id="totalPremium">₹8.2L</span>
+            <span class="stat-label">Premium Collected</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-amber">🔔</div>
+          <div class="stat-info">
+            <span class="stat-number" id="pendingRenewals">2</span>
+            <span class="stat-label">Pending Renewals</span>
+          </div>
+        </div>
+      </div>
+      <div class="table-controls">
+        <input type="text" id="searchPolicies" placeholder="🔍 Search by customer name or policy ID..."
+          class="search-input" />
+        <button class="btn btn-secondary" id="exportCsv">📥 Export CSV</button>
+      </div>
+      <div class="table-wrapper">
+        <table class="policy-table" id="policyTable">
+          <thead>
+            <tr>
+              <th>Policy ID</th>
+              <th>Customer Name</th>
+              <th>Plan Type</th>
+              <th>Sum Assured</th>
+              <th>Premium</th>
+              <th>Start Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="policyTableBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ AGENT PROFILE ═══════════ -->
+  <section class="section" id="profile">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">👤 Agent</span>
+        <h2>Agent Profile</h2>
+        <p>Your profile information and performance metrics.</p>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-avatar">
+            <div class="avatar-circle">
+              <span>SA</span>
+            </div>
+            <div class="avatar-badge">✓ Verified</div>
+          </div>
+          <h3 class="profile-name" id="agentName">Swyam Arora</h3>
+          <p class="profile-role">Senior Insurance Advisor</p>
+          <div class="profile-details">
+            <div class="profile-detail">
+              <span class="detail-label">IRDA License No.</span>
+              <span class="detail-value" id="agentIrda">IRDA/AG/2024/001234</span>
+            </div>
+            <div class="profile-detail">
+              <span class="detail-label">Phone</span>
+              <span class="detail-value" id="agentPhone">+91 81683 77059</span>
+            </div>
+            <div class="profile-detail">
+              <span class="detail-label">Email</span>
+              <span class="detail-value" id="agentEmail">swyamarora@gmail.com</span>
+            </div>
+            <div class="profile-detail">
+              <span class="detail-label">Branch</span>
+              <span class="detail-value" id="agentBranch">Mumbai — Andheri West</span>
+            </div>
+          </div>
+        </div>
+        <div class="performance-card">
+          <h3>Performance Metrics</h3>
+          <div class="perf-grid">
+            <div class="perf-item">
+              <div class="perf-value-large">7</div>
+              <span class="perf-label">Policies This Month</span>
+            </div>
+            <div class="perf-item">
+              <div class="perf-value-large">4.8 ⭐</div>
+              <span class="perf-label">Customer Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Tata <span class="logo-aia">AIA</span> Life Insurance</span>
+          <p>Protecting families. Securing futures. India's trusted life insurance partner since 2001.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#hero">Home</a>
+          <a href="#insurance-portal">New Policy</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#my-policies">Dashboard</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">IRDAI Registration</a>
+          <a href="#">Disclaimer</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>📞 1800-209-8700</p>
+          <p>✉️ care@tataaia.com</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook" class="social-icon">f</a>
+            <a href="#" aria-label="Twitter" class="social-icon">𝕏</a>
+            <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+            <a href="#" aria-label="Instagram" class="social-icon">📷</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>IRDAI Registration No.: 110 | CIN: U66010MH2000PLC128403</p>
+        <p>© 2025 Tata AIA Life Insurance Company Limited. All rights reserved. For Agent Portal Use Only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon" id="toastIcon">✅</span>
+    <span class="toast-msg" id="toastMsg">Success!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
